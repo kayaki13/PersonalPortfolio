@@ -3,17 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Timeline</title>
+    <title>Personal Website</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <h1>Task Timeline</h1>
+    <h1>Personal Website of </h1>
+    <h2>Zhenhao Zhou</h2>
+    <img src="https://i2.hdslb.com/bfs/archive/fbc6c70460f8a3bcb3d3cb69373a2b956e200b15.jpg" alt="alternatetext"width="500">
     <p id="date"></p>
     <ul>
-        <li class="list">Edit the head</li>
-        <li class="list">Edit the body</li>
-        <Li>Link to JavaScript</Li>
+        About me
+        <li class="list">I'm designer, photographer and programmer</li>
+        <li class="list">I studied Physics, Architecture and now Computer Science</li>
     </ul>
+    <ul>
+        Education
+        <li class="list">M.Arch from University of Pennsylvania 2017-2020</li>
+        <li class="list">B.S from Emory University 2012-2016</li>
+    </ul>
+    <p>Projects in CS:</p>
+<button type="button" class="collapsible">Android</button>
+<div class="content">
+  <p>● Designed the Instagram Flavor News app based on Google Component Architectural MVVM Pattern<br>
+    ● Implemented the bottom bar & page navigation using JetPack navigation component<br>
+    ● Utilized Mindorks’s PlaceHolderView to support swipe gestures for liking/disliking the news<br>
+    ● Built the Room Database with LiveData & ViewModel to support local cache and offline model<br>
+    ● Integrated Retrofit and Rxjava to pull the latest news data from a RESTFUL endpoint<br>
+</p>
+</div>
+<button type="button" class="collapsible">React</button>
+<div class="content">
+  <p>● Designed and developed a visualization dashboard using ReactJS and D3 to track satellites in real-time based on
+    geo-location.<br>
+    ● Built location, altitude, and duration based selector to refine satellite search<br>
+    ● Utilized Mindorks’s PlaceHolderView to support swipe gestures for liking/disliking the news<br>
+    ● Animated selected satellite paths on a world map using D3 to improve the user friendness.<br>
+    ● Deployed the dashboard to Amazon Web Service for demonstration.<br>
+</p>
+</div>
+<button type="button" class="collapsible">Deep Learning</button>
+<div class="content">
+  <p>● Apply mixup to an unsupervised or semi-supervised task as an additional component to the loss function.<br>
+    ● Select different data types and apply them to the deep learning model<br>Regulize side-effect of mixup parameter<br>
+    ● Utilizing mathematical regression and refine the theoretical formula<br>
+    ● Multiple techniques in both classical Machine Learning and Deep Learning are used towards the final results<br>
+</p>
+</div>
+<button type="button" class="collapsible">Data Analytics</button>
+<div class="content">
+  <p>● Downloaded and extracted a large amount of data from Word Bank and WHO websites<br>
+    ● Thoroughly cleaned and wrangled data using data science tools such as Pandas<br>
+    ● Represented the results using python-based visualization tools such as Seaborn and MatplotLib<br>
+    ● Did linear regression, principal component analysis(PCA) and Random Forest modeling using SkLearn<br>
+</p>
+</div>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "none") {
+          content.style.display = "block";
+        } else {
+          content.style.display = "none";
+        }
+      });
+    }
+    </script>
     <script src="app.js"></script>
     <noscript>You need to enable JavaScript to view the full site.</noscript>
 </body>
